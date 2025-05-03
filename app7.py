@@ -269,7 +269,7 @@ with tab_inputs:
         st.markdown("#### Utility Costs")
         col1, col2 = st.columns(2)
         with col1:
-            electricity_cost_kwh = st.number_input("Electricity Cost (PHP/kWh)", 1.0, 25.0, 12.5.0, 0.5)
+            electricity_cost_kwh = st.number_input("Electricity Cost (PHP/kWh)", 1.0, 25.0, 12.5, 0.5)
             water_cost_m3 = st.number_input("Water Cost (PHP/cubic meter)", 10.0, 200.0, 50.0, 5.0)
         with col2:
             electricity_consumption_per_ton = st.number_input("Est. Electricity Use (kWh/ton feedstock)", 10.0, 2000.0, 350.0, 10.0)
