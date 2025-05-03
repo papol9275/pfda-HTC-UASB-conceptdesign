@@ -1001,4 +1001,23 @@ with tab_info:
 
 # --- Footer ---
 st.markdown("---")
-st.caption(f"Analysis based on provided inputs. Currency: PHP. Last run: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+st.caption(f"""
+
+*Webapp developed by:*
+
+**Engr. John Paul Renzo Jucar, MSc.**  
+*Principal Engineer*  
+Environment Division  
+Woodfields Consultants Inc.
+  
+**Engr. Marisheen Macarasig, CE, SE**  
+*Vice President*  
+Environment Division  
+Woodfields Consultants Inc.
+
+**Reynaldo Medina, PhD**  
+*Chairman Emeritus*  
+Woodfields Consultants Inc.
+            
+**Last run: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}**
+""")
