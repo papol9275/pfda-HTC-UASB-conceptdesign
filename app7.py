@@ -248,7 +248,7 @@ with tab_inputs:
             pre_processing_costs = st.number_input("Pre-processing Equipment (PHP)", 0.0, 50000000.0, 2500000.0, 100000.0, format="%.0f", help="Shredders, grinders, etc.")
             storage_costs = st.number_input("Storage Facilities (PHP)", 0.0, 20000000.0, 1000000.0, 25000.0, format="%.0f", help="Feedstock and hydrochar storage.")
         with col2:
-             reactor_cost_per_ton_capacity = st.number_input("Reactor Cost per ton/yr Capacity (PHP)", 1000.0, 50000.0, 17000.0, 250.0, help="Cost of HTC reactor(s) per ton annual throughput.")
+             reactor_cost_per_ton_capacity = st.number_input("Reactor Cost per ton/yr Capacity (PHP)", 1000.0, 50000.0, 20000.0, 250.0, help="Cost of HTC reactor(s) per ton annual throughput.")
              reactor_costs_calculated = reactor_cost_per_ton_capacity * feedstock_throughput # Store calculated value
              st.info(f"Est. Reactor Cost: **{format_php(reactor_costs_calculated)}**")
              post_processing_costs = st.number_input("Post-processing Equipment (PHP)", 0.0, 500000000.0, max(3500000.0, reactor_costs_calculated * 0.05 ), 100000.0, format="%.0f", help="Dewatering, drying, etc.")
@@ -315,7 +315,7 @@ with tab_inputs:
             st.markdown("#### UASB Cost Parameters")
             col1, col2 = st.columns(2)
             with col1:
-                uasb_reactor_cost_per_m3 = st.number_input("UASB Reactor Cost (PHP/m³)", 5000.0, 100000.0, 20000.0, 100.0, help="Cost per m³ UASB reactor volume.")
+                uasb_reactor_cost_per_m3 = st.number_input("UASB Reactor Cost (PHP/m³)", 5000.0, 100000.0, 22500.0, 100.0, help="Cost per m³ UASB reactor volume.")
                 uasb_preprocessing_cost = st.number_input("UASB Pre-processing Equipment (PHP)", 0.0, 10000000.0, 3000000.0, 100000.0, format="%.0f")
             with col2:
                 uasb_postprocessing_cost = st.number_input("UASB Post-processing Equipment (PHP)", 0.0, 10000000.0, 5000000.0, 100000.0, format="%.0f")
